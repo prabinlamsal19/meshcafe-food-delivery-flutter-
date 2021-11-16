@@ -1,0 +1,347 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/meshcafe_app/src/pages/homepage.dart', 'packages/meshcafe_app/src/pages/order_page.dart', 'packages/meshcafe_app/src/pages/favorite_page.dart', 'packages/meshcafe_app/src/pages/profile_page.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/bottom_navigation_bar_item.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart'], (function load__packages__meshcafe_app__src__screens__main_screen_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__meshcafe_app__src__pages__homepage$46dart, packages__meshcafe_app__src__pages__order_page$46dart, packages__meshcafe_app__src__pages__favorite_page$46dart, packages__meshcafe_app__src__pages__profile_page$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__bottom_navigation_bar_item$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const homepage = packages__meshcafe_app__src__pages__homepage$46dart.src__pages__homepage;
+  const order_page = packages__meshcafe_app__src__pages__order_page$46dart.src__pages__order_page;
+  const favorite_page = packages__meshcafe_app__src__pages__favorite_page$46dart.src__pages__favorite_page;
+  const profile_page = packages__meshcafe_app__src__pages__profile_page$46dart.src__pages__profile_page;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const bottom_navigation_bar = packages__flutter__src__material__icon_button$46dart.src__material__bottom_navigation_bar;
+  const bottom_navigation_bar_item = packages__flutter__src__widgets__bottom_navigation_bar_item$46dart.src__widgets__bottom_navigation_bar_item;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  var main_screen = Object.create(dart.library);
+  var $_get = dartx._get;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    intLToNull: () => (T.intLToNull = dart.constFn(dart.fnType(core.Null, [T.intL()])))(),
+    BottomNavigationBarItemL: () => (T.BottomNavigationBarItemL = dart.constFn(dart.legacy(bottom_navigation_bar_item.BottomNavigationBarItem)))(),
+    JSArrayOfBottomNavigationBarItemL: () => (T.JSArrayOfBottomNavigationBarItemL = dart.constFn(_interceptors.JSArray$(T.BottomNavigationBarItemL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C1() {
+      return C[1] = dart.constList([], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 30,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 30,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 32,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 32,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13], T._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 52,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16], T._LocationL());
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 41,
+        [_Location_line]: 58,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 9,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "currentIndex",
+        [_Location_column]: 9,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "type",
+        [_Location_column]: 9,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "items",
+        [_Location_column]: 9,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19, C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "bottomNavigationBar",
+        [_Location_column]: 7,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25, C[26] || CT.C26], T._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 39,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/screens/main_screen.dart"
+      });
+    }
+  }, false);
+  var C = Array(27).fill(void 0);
+  var I = ["package:meshcafe_app/src/screens/main_screen.dart"];
+  main_screen.MainScreen = class MainScreen extends framework.StatefulWidget {
+    createState() {
+      return new main_screen._MainScreenState.new();
+    }
+  };
+  (main_screen.MainScreen.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    main_screen.MainScreen.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = main_screen.MainScreen.prototype;
+  dart.addTypeTests(main_screen.MainScreen);
+  dart.addTypeCaches(main_screen.MainScreen);
+  dart.setMethodSignature(main_screen.MainScreen, () => ({
+    __proto__: dart.getMethods(main_screen.MainScreen.__proto__),
+    createState: dart.fnType(dart.legacy(main_screen._MainScreenState), [])
+  }));
+  dart.setLibraryUri(main_screen.MainScreen, I[0]);
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  main_screen._MainScreenState = class _MainScreenState extends framework.State$(dart.legacy(main_screen.MainScreen)) {
+    initState() {
+      super.initState();
+      this.homePage = new homepage.HomePage.new({$creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+      this.orderPage = new order_page.OrderPage.new({$creationLocationd_0dea112b090073317d4: C[2] || CT.C2});
+      this.favoritePage = new favorite_page.FavoritePage.new({$creationLocationd_0dea112b090073317d4: C[3] || CT.C3});
+      this.profilePage = new profile_page.ProfilePage.new({$creationLocationd_0dea112b090073317d4: C[4] || CT.C4});
+      this.pages = T.JSArrayOfWidgetL().of([this.homePage, this.orderPage, this.favoritePage, this.profilePage]);
+      this.currentPage = this.orderPage;
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({bottomNavigationBar: new bottom_navigation_bar.BottomNavigationBar.new({onTap: dart.fn(index => {
+            this.setState(dart.fn(() => {
+              this.currentTabIndex = index;
+              this.currentPage = this.pages[$_get](index);
+            }, T.VoidToNull()));
+          }, T.intLToNull()), currentIndex: this.currentTabIndex, type: bottom_navigation_bar.BottomNavigationBarType.fixed, items: T.JSArrayOfBottomNavigationBarItemL().of([new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.home, {$creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), label: "Home"}), new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.shopping_cart_outlined, {$creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), label: "Orders"}), new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.favorite_outline_outlined, {$creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), label: "Favourite"}), new bottom_navigation_bar_item.BottomNavigationBarItem.new({icon: new icon.Icon.new(icons.Icons.person, {$creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), label: "Profile"})]), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), body: this.currentPage, $creationLocationd_0dea112b090073317d4: C[23] || CT.C23});
+    }
+  };
+  (main_screen._MainScreenState.new = function() {
+    this.currentTabIndex = 0;
+    this.pages = null;
+    this.currentPage = null;
+    this.homePage = null;
+    this.orderPage = null;
+    this.favoritePage = null;
+    this.profilePage = null;
+    main_screen._MainScreenState.__proto__.new.call(this);
+    ;
+  }).prototype = main_screen._MainScreenState.prototype;
+  dart.addTypeTests(main_screen._MainScreenState);
+  dart.addTypeCaches(main_screen._MainScreenState);
+  dart.setMethodSignature(main_screen._MainScreenState, () => ({
+    __proto__: dart.getMethods(main_screen._MainScreenState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(main_screen._MainScreenState, I[0]);
+  dart.setFieldSignature(main_screen._MainScreenState, () => ({
+    __proto__: dart.getFields(main_screen._MainScreenState.__proto__),
+    currentTabIndex: dart.fieldType(dart.legacy(core.int)),
+    pages: dart.fieldType(dart.legacy(core.List$(dart.legacy(framework.Widget)))),
+    currentPage: dart.fieldType(dart.legacy(framework.Widget)),
+    homePage: dart.fieldType(dart.legacy(homepage.HomePage)),
+    orderPage: dart.fieldType(dart.legacy(order_page.OrderPage)),
+    favoritePage: dart.fieldType(dart.legacy(favorite_page.FavoritePage)),
+    profilePage: dart.fieldType(dart.legacy(profile_page.ProfilePage))
+  }));
+  dart.trackLibraries("packages/meshcafe_app/src/screens/main_screen.dart", {
+    "package:meshcafe_app/src/screens/main_screen.dart": main_screen
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["main_screen.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AASoC;IAAkB;;;;;;EACtD;;;;;;;;;;;;;;;AAgBqB,MAAX;AACe,MAArB,gBAAW;AACY,MAAvB,iBAAY;AACiB,MAA7B,oBAAe;AACY,MAA3B,mBAAc;AAE0C,MAAxD,aAAQ,yBAAC,eAAU,gBAAW,mBAAc;AACrB,MAAvB,mBAAc;IAChB;UAG0B;AACxB,YAAO,iDACgB,0DACZ,QAAK;AAIR,YAHF,cAAS;AACgB,cAAvB,uBAAkB,KAAK;AACG,cAA1B,mBAAc,AAAK,kBAAC,KAAK;;4CAGf,4BACgB,4DACE,0CAC9B,kEACQ,kBAAW,mFACV,UAET,kEACU,kBAAW,qGAAgC,YACrD,kEACU,kBAAW,0GAAmC,eACxD,kEAA8B,kBAAW,uFAAgB,gFAGvD;IAEV;;;IAjDI,uBAAkB;IAET;IACN;IAEE;IACC;IACG;IACD;;;EA0Cd","file":"../../../../../../packages/meshcafe_app/src/screens/main_screen.dart.lib.js"}');
+  // Exports:
+  return {
+    src__screens__main_screen: main_screen
+  };
+}));
+
+//# sourceMappingURL=main_screen.dart.lib.js.map

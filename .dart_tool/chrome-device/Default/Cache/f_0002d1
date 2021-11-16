@@ -1,0 +1,374 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/material/card.dart', 'packages/flutter/src/painting/image_resolution.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/painting/strut_style.dart'], (function load__packages__meshcafe_app__src__widgets__food_card_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__material__card$46dart, packages__flutter__src__painting__image_resolution$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__painting__strut_style$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const card = packages__flutter__src__material__card$46dart.src__material__card;
+  const image_resolution = packages__flutter__src__painting__image_resolution$46dart.src__painting__image_resolution;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  var food_card = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "image",
+        [_Location_column]: 17,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 17,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 17,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 21,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/widgets/food_card.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 17,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/widgets/food_card.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 24,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/widgets/food_card.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 43,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 37,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/widgets/food_card.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 17,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/widgets/food_card.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21], T._LocationL());
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 19,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/widgets/food_card.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 11,
+        [_Location_line]: 15,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24, C[25] || CT.C25], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 14,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/widgets/food_card.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 14,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 13,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/widgets/food_card.dart"
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 7,
+        [_Location_line]: 12,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 13,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.constList([C[31] || CT.C31, C[32] || CT.C32], T._LocationL());
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[30] || CT.C30,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 11,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/widgets/food_card.dart"
+      });
+    }
+  }, false);
+  var C = Array(33).fill(void 0);
+  var I = ["package:meshcafe_app/src/widgets/food_card.dart"];
+  var categoryName$ = dart.privateName(food_card, "FoodCard.categoryName");
+  var imagePath$ = dart.privateName(food_card, "FoodCard.imagePath");
+  var numberOfItems$ = dart.privateName(food_card, "FoodCard.numberOfItems");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  food_card.FoodCard = class FoodCard extends framework.StatelessWidget {
+    get categoryName() {
+      return this[categoryName$];
+    }
+    set categoryName(value) {
+      super.categoryName = value;
+    }
+    get imagePath() {
+      return this[imagePath$];
+    }
+    set imagePath(value) {
+      super.imagePath = value;
+    }
+    get numberOfItems() {
+      return this[numberOfItems$];
+    }
+    set numberOfItems(value) {
+      super.numberOfItems = value;
+    }
+    build(context) {
+      return new container.Container.new({margin: new edge_insets.EdgeInsets.only({right: 20.0}), child: new card.Card.new({child: new basic.Padding.new({padding: new edge_insets.EdgeInsets.symmetric({horizontal: 20.0, vertical: 10.0}), child: new basic.Row.new({children: T.JSArrayOfWidgetL().of([new image.Image.new({image: new image_resolution.AssetImage.new(this.imagePath), height: 65.0, width: 65.0, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new basic.SizedBox.new({width: 20.0, $creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new text.Text.new(this.categoryName, {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.bold, fontSize: 16.0}), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), new text.Text.new(dart.str(this.numberOfItems) + " Kinds", {$creationLocationd_0dea112b090073317d4: C[12] || CT.C12})]), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15})]), $creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), $creationLocationd_0dea112b090073317d4: C[29] || CT.C29});
+    }
+  };
+  (food_card.FoodCard.new = function(opts) {
+    let categoryName = opts && 'categoryName' in opts ? opts.categoryName : null;
+    let imagePath = opts && 'imagePath' in opts ? opts.imagePath : null;
+    let numberOfItems = opts && 'numberOfItems' in opts ? opts.numberOfItems : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[categoryName$] = categoryName;
+    this[imagePath$] = imagePath;
+    this[numberOfItems$] = numberOfItems;
+    food_card.FoodCard.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = food_card.FoodCard.prototype;
+  dart.addTypeTests(food_card.FoodCard);
+  dart.addTypeCaches(food_card.FoodCard);
+  dart.setMethodSignature(food_card.FoodCard, () => ({
+    __proto__: dart.getMethods(food_card.FoodCard.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(food_card.FoodCard, I[0]);
+  dart.setFieldSignature(food_card.FoodCard, () => ({
+    __proto__: dart.getFields(food_card.FoodCard.__proto__),
+    categoryName: dart.finalFieldType(dart.legacy(core.String)),
+    imagePath: dart.finalFieldType(dart.legacy(core.String)),
+    numberOfItems: dart.finalFieldType(dart.legacy(core.int))
+  }));
+  dart.trackLibraries("packages/meshcafe_app/src/widgets/food_card.dart", {
+    "package:meshcafe_app/src/widgets/food_card.dart": food_card
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["food_card.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAGe;;;;;;IACA;;;;;;IACH;;;;;;UAIgB;AACxB,YAAO,sCACc,wCAAY,eACxB,0BACE,gCACe,kDACN,gBACF,eAEL,6BACa,yBAChB,4BACS,oCAAW,yBACV,aACD,+DAET,+BACS,+DAET,yCACuC,yCACnB,yBAChB,kBAAK,2BACM,0CACkB,8BACb,iEAEhB,kBACwB,SAApB,sBAAa;IASjC;;;QAvCe;QAAmB;QAAgB;;IAAnC;IAAmB;IAAgB;AAAlD;;EAAiE","file":"../../../../../../packages/meshcafe_app/src/widgets/food_card.dart.lib.js"}');
+  // Exports:
+  return {
+    src__widgets__food_card: food_card
+  };
+}));
+
+//# sourceMappingURL=food_card.dart.lib.js.map

@@ -1,0 +1,383 @@
+define(['dart_sdk', 'packages/flutter/src/foundation/change_notifier.dart', 'packages/flutter/src/widgets/widget_span.dart'], (function load__packages__scoped_model__scoped_model_dart(dart_sdk, packages__flutter__src__foundation__change_notifier$46dart, packages__flutter__src__widgets__widget_span$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const collection = dart_sdk.collection;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const change_notifier = packages__flutter__src__foundation__change_notifier$46dart.src__foundation__change_notifier;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const transitions = packages__flutter__src__widgets__widget_span$46dart.src__widgets__transitions;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  var scoped_model = Object.create(dart.library);
+  var $length = dartx.length;
+  var $toList = dartx.toList;
+  var $forEach = dartx.forEach;
+  var $toString = dartx.toString;
+  dart._checkModuleNullSafetyMode(false);
+  var T$ = {
+    VoidTovoid: () => (T$.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    VoidToLvoid: () => (T$.VoidToLvoid = dart.constFn(dart.legacy(T$.VoidTovoid())))(),
+    _HashSetOfVoidToLvoid: () => (T$._HashSetOfVoidToLvoid = dart.constFn(collection._HashSet$(T$.VoidToLvoid())))(),
+    FnTovoid: () => (T$.FnTovoid = dart.constFn(dart.fnType(dart.void, [T$.VoidToLvoid()])))(),
+    VoidToNull: () => (T$.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    _LocationL: () => (T$._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    BuildContextL: () => (T$.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    WidgetL: () => (T$.WidgetL = dart.constFn(dart.legacy(framework.Widget)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T$);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "model",
+        [_Location_column]: 51,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 65,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T$._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 121,
+        [_Location_file]: "file:///Z:/Copied%20from%20downloads/flutter/.pub-cache/hosted/pub.dartlang.org/scoped_model-1.1.0/lib/scoped_model.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "animation",
+        [_Location_column]: 7,
+        [_Location_line]: 120,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 7,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], T$._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 119,
+        [_Location_file]: "file:///Z:/Copied%20from%20downloads/flutter/.pub-cache/hosted/pub.dartlang.org/scoped_model-1.1.0/lib/scoped_model.dart"
+      });
+    }
+  }, false);
+  var C = Array(8).fill(void 0);
+  var I = [
+    "package:scoped_model/scoped_model.dart",
+    "file:///Z:/Copied%20from%20downloads/flutter/.pub-cache/hosted/pub.dartlang.org/scoped_model-1.1.0/lib/scoped_model.dart"
+  ];
+  var _listeners = dart.privateName(scoped_model, "_listeners");
+  var _version = dart.privateName(scoped_model, "_version");
+  var _microtaskVersion = dart.privateName(scoped_model, "_microtaskVersion");
+  scoped_model.Model = class Model extends change_notifier.Listenable {
+    addListener(listener) {
+      this[_listeners].add(listener);
+    }
+    removeListener(listener) {
+      this[_listeners].remove(listener);
+    }
+    get listenerCount() {
+      return this[_listeners][$length];
+    }
+    notifyListeners() {
+      if (this[_microtaskVersion] == this[_version]) {
+        this[_microtaskVersion] = dart.notNull(this[_microtaskVersion]) + 1;
+        async.scheduleMicrotask(dart.fn(() => {
+          this[_version] = dart.notNull(this[_version]) + 1;
+          this[_microtaskVersion] = this[_version];
+          this[_listeners][$toList]()[$forEach](dart.fn(listener => listener(), T$.FnTovoid()));
+        }, T$.VoidToNull()));
+      }
+    }
+  };
+  (scoped_model.Model.new = function() {
+    this[_listeners] = new (T$._HashSetOfVoidToLvoid()).new();
+    this[_version] = 0;
+    this[_microtaskVersion] = 0;
+    scoped_model.Model.__proto__.new.call(this);
+    ;
+  }).prototype = scoped_model.Model.prototype;
+  dart.addTypeTests(scoped_model.Model);
+  dart.addTypeCaches(scoped_model.Model);
+  dart.setMethodSignature(scoped_model.Model, () => ({
+    __proto__: dart.getMethods(scoped_model.Model.__proto__),
+    addListener: dart.fnType(dart.void, [dart.legacy(dart.fnType(dart.void, []))]),
+    removeListener: dart.fnType(dart.void, [dart.legacy(dart.fnType(dart.void, []))]),
+    notifyListeners: dart.fnType(dart.void, [])
+  }));
+  dart.setGetterSignature(scoped_model.Model, () => ({
+    __proto__: dart.getGetters(scoped_model.Model.__proto__),
+    listenerCount: dart.legacy(core.int)
+  }));
+  dart.setLibraryUri(scoped_model.Model, I[0]);
+  dart.setFieldSignature(scoped_model.Model, () => ({
+    __proto__: dart.getFields(scoped_model.Model.__proto__),
+    [_listeners]: dart.finalFieldType(dart.legacy(core.Set$(dart.legacy(dart.fnType(dart.void, []))))),
+    [_version]: dart.fieldType(dart.legacy(core.int)),
+    [_microtaskVersion]: dart.fieldType(dart.legacy(core.int))
+  }));
+  const _is_ModelFinder_default = Symbol('_is_ModelFinder_default');
+  scoped_model.ModelFinder$ = dart.generic(T => {
+    var TL = () => (TL = dart.constFn(dart.legacy(T)))();
+    class ModelFinder extends core.Object {
+      of(context, opts) {
+        let rebuildOnChange = opts && 'rebuildOnChange' in opts ? opts.rebuildOnChange : false;
+        return scoped_model.ScopedModel.of(TL(), context, {rebuildOnChange: rebuildOnChange});
+      }
+    }
+    (ModelFinder.new = function() {
+      ;
+    }).prototype = ModelFinder.prototype;
+    dart.addTypeTests(ModelFinder);
+    ModelFinder.prototype[_is_ModelFinder_default] = true;
+    dart.addTypeCaches(ModelFinder);
+    dart.setMethodSignature(ModelFinder, () => ({
+      __proto__: dart.getMethods(ModelFinder.__proto__),
+      of: dart.fnType(dart.legacy(T), [dart.legacy(framework.BuildContext)], {rebuildOnChange: dart.legacy(core.bool)}, {})
+    }));
+    dart.setLibraryUri(ModelFinder, I[0]);
+    return ModelFinder;
+  });
+  scoped_model.ModelFinder = scoped_model.ModelFinder$();
+  dart.addTypeTests(scoped_model.ModelFinder, _is_ModelFinder_default);
+  var model$ = dart.privateName(scoped_model, "ScopedModel.model");
+  var child$ = dart.privateName(scoped_model, "ScopedModel.child");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const _is_ScopedModel_default = Symbol('_is_ScopedModel_default');
+  scoped_model.ScopedModel$ = dart.generic(T => {
+    var TL = () => (TL = dart.constFn(dart.legacy(T)))();
+    var _InheritedModelOfTL = () => (_InheritedModelOfTL = dart.constFn(scoped_model._InheritedModel$(TL())))();
+    var _InheritedModelLOfTL = () => (_InheritedModelLOfTL = dart.constFn(dart.legacy(_InheritedModelOfTL())))();
+    var BuildContextLAndWidgetLTo_InheritedModelLOfTL = () => (BuildContextLAndWidgetLTo_InheritedModelLOfTL = dart.constFn(dart.fnType(_InheritedModelLOfTL(), [T$.BuildContextL(), T$.WidgetL()])))();
+    class ScopedModel extends framework.StatelessWidget {
+      get model() {
+        return this[model$];
+      }
+      set model(value) {
+        super.model = value;
+      }
+      get child() {
+        return this[child$];
+      }
+      set child(value) {
+        super.child = value;
+      }
+      build(context) {
+        return new transitions.AnimatedBuilder.new({animation: this.model, builder: dart.fn((context, _) => new (_InheritedModelOfTL()).new({model: this.model, child: this.child, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), BuildContextLAndWidgetLTo_InheritedModelLOfTL()), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4});
+      }
+      static of(T, context, opts) {
+        let t0;
+        let rebuildOnChange = opts && 'rebuildOnChange' in opts ? opts.rebuildOnChange : false;
+        let widget = dart.test(rebuildOnChange) ? context.dependOnInheritedWidgetOfExactType(dart.legacy(scoped_model._InheritedModel$(dart.legacy(T)))) : (t0 = context.getElementForInheritedWidgetOfExactType(dart.legacy(scoped_model._InheritedModel$(dart.legacy(T)))), t0 == null ? null : t0.widget);
+        if (widget == null) {
+          dart.throw(new scoped_model.ScopedModelError.new());
+        } else {
+          return dart.legacy(scoped_model._InheritedModel$(dart.legacy(T))).as(widget).model;
+        }
+      }
+    }
+    (ScopedModel.new = function(opts) {
+      let model = opts && 'model' in opts ? opts.model : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[model$] = model;
+      this[child$] = child;
+      if (!(model != null)) dart.assertFailed(null, I[1], 114, 16, "model != null");
+      if (!(child != null)) dart.assertFailed(null, I[1], 115, 16, "child != null");
+      ScopedModel.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = ScopedModel.prototype;
+    dart.addTypeTests(ScopedModel);
+    ScopedModel.prototype[_is_ScopedModel_default] = true;
+    dart.addTypeCaches(ScopedModel);
+    dart.setMethodSignature(ScopedModel, () => ({
+      __proto__: dart.getMethods(ScopedModel.__proto__),
+      build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+    }));
+    dart.setLibraryUri(ScopedModel, I[0]);
+    dart.setFieldSignature(ScopedModel, () => ({
+      __proto__: dart.getFields(ScopedModel.__proto__),
+      model: dart.finalFieldType(dart.legacy(T)),
+      child: dart.finalFieldType(dart.legacy(framework.Widget))
+    }));
+    return ScopedModel;
+  });
+  scoped_model.ScopedModel = scoped_model.ScopedModel$();
+  dart.addTypeTests(scoped_model.ScopedModel, _is_ScopedModel_default);
+  const _is__InheritedModel_default = Symbol('_is__InheritedModel_default');
+  scoped_model._InheritedModel$ = dart.generic(T => {
+    var TL = () => (TL = dart.constFn(dart.legacy(T)))();
+    var _InheritedModelOfTL = () => (_InheritedModelOfTL = dart.constFn(scoped_model._InheritedModel$(TL())))();
+    var _InheritedModelLOfTL = () => (_InheritedModelLOfTL = dart.constFn(dart.legacy(_InheritedModelOfTL())))();
+    class _InheritedModel extends framework.InheritedWidget {
+      updateShouldNotify(oldWidget) {
+        _InheritedModelLOfTL().as(oldWidget);
+        return oldWidget.version != this.version;
+      }
+    }
+    (_InheritedModel.new = function(opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let model = opts && 'model' in opts ? opts.model : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this.model = model;
+      this.version = model[_version];
+      _InheritedModel.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = _InheritedModel.prototype;
+    dart.addTypeTests(_InheritedModel);
+    _InheritedModel.prototype[_is__InheritedModel_default] = true;
+    dart.addTypeCaches(_InheritedModel);
+    dart.setMethodSignature(_InheritedModel, () => ({
+      __proto__: dart.getMethods(_InheritedModel.__proto__),
+      updateShouldNotify: dart.fnType(dart.legacy(core.bool), [dart.legacy(core.Object)])
+    }));
+    dart.setLibraryUri(_InheritedModel, I[0]);
+    dart.setFieldSignature(_InheritedModel, () => ({
+      __proto__: dart.getFields(_InheritedModel.__proto__),
+      model: dart.finalFieldType(dart.legacy(T)),
+      version: dart.finalFieldType(dart.legacy(core.int))
+    }));
+    return _InheritedModel;
+  });
+  scoped_model._InheritedModel = scoped_model._InheritedModel$();
+  dart.addTypeTests(scoped_model._InheritedModel, _is__InheritedModel_default);
+  var builder$ = dart.privateName(scoped_model, "ScopedModelDescendant.builder");
+  var child$0 = dart.privateName(scoped_model, "ScopedModelDescendant.child");
+  var rebuildOnChange$ = dart.privateName(scoped_model, "ScopedModelDescendant.rebuildOnChange");
+  const _is_ScopedModelDescendant_default = Symbol('_is_ScopedModelDescendant_default');
+  scoped_model.ScopedModelDescendant$ = dart.generic(T => {
+    var TL = () => (TL = dart.constFn(dart.legacy(T)))();
+    class ScopedModelDescendant extends framework.StatelessWidget {
+      get builder() {
+        return this[builder$];
+      }
+      set builder(value) {
+        super.builder = value;
+      }
+      get child() {
+        return this[child$0];
+      }
+      set child(value) {
+        super.child = value;
+      }
+      get rebuildOnChange() {
+        return this[rebuildOnChange$];
+      }
+      set rebuildOnChange(value) {
+        super.rebuildOnChange = value;
+      }
+      build(context) {
+        let t2, t1, t0;
+        t0 = context;
+        t1 = this.child;
+        t2 = scoped_model.ScopedModel.of(TL(), context, {rebuildOnChange: this.rebuildOnChange});
+        return this.builder(t0, t1, t2);
+      }
+    }
+    (ScopedModelDescendant.new = function(opts) {
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let rebuildOnChange = opts && 'rebuildOnChange' in opts ? opts.rebuildOnChange : true;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[builder$] = builder;
+      this[child$0] = child;
+      this[rebuildOnChange$] = rebuildOnChange;
+      ScopedModelDescendant.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = ScopedModelDescendant.prototype;
+    dart.addTypeTests(ScopedModelDescendant);
+    ScopedModelDescendant.prototype[_is_ScopedModelDescendant_default] = true;
+    dart.addTypeCaches(ScopedModelDescendant);
+    dart.setMethodSignature(ScopedModelDescendant, () => ({
+      __proto__: dart.getMethods(ScopedModelDescendant.__proto__),
+      build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+    }));
+    dart.setLibraryUri(ScopedModelDescendant, I[0]);
+    dart.setFieldSignature(ScopedModelDescendant, () => ({
+      __proto__: dart.getFields(ScopedModelDescendant.__proto__),
+      builder: dart.finalFieldType(dart.legacy(dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext), dart.legacy(framework.Widget), dart.legacy(T)]))),
+      child: dart.finalFieldType(dart.legacy(framework.Widget)),
+      rebuildOnChange: dart.finalFieldType(dart.legacy(core.bool))
+    }));
+    return ScopedModelDescendant;
+  });
+  scoped_model.ScopedModelDescendant = scoped_model.ScopedModelDescendant$();
+  dart.addTypeTests(scoped_model.ScopedModelDescendant, _is_ScopedModelDescendant_default);
+  scoped_model.ScopedModelError = class ScopedModelError extends core.Error {
+    toString() {
+      return "Error: Could not find the correct ScopedModel.\n    \nTo fix, please:\n          \n  * Provide types to ScopedModel<MyModel>\n  * Provide types to ScopedModelDescendant<MyModel> \n  * Provide types to ScopedModel.of<MyModel>() \n  * Always use package imports. Ex: `import 'package:my_app/my_model.dart';\n  \nIf none of these solutions work, please file a bug at:\nhttps://github.com/brianegan/scoped_model/issues/new\n      ";
+    }
+  };
+  (scoped_model.ScopedModelError.new = function() {
+    scoped_model.ScopedModelError.__proto__.new.call(this);
+    ;
+  }).prototype = scoped_model.ScopedModelError.prototype;
+  dart.addTypeTests(scoped_model.ScopedModelError);
+  dart.addTypeCaches(scoped_model.ScopedModelError);
+  dart.setMethodSignature(scoped_model.ScopedModelError, () => ({
+    __proto__: dart.getMethods(scoped_model.ScopedModelError.__proto__),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setLibraryUri(scoped_model.ScopedModelError, I[0]);
+  dart.defineExtensionMethods(scoped_model.ScopedModelError, ['toString']);
+  dart.trackLibraries("packages/scoped_model/scoped_model.dart", {
+    "package:scoped_model/scoped_model.dart": scoped_model
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["scoped_model.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;gBAyCgC;AACJ,MAAxB,AAAW,qBAAI,QAAQ;IACzB;mBAIiC;AACJ,MAA3B,AAAW,wBAAO,QAAQ;IAC5B;;AAGyB,YAAA,AAAW;IAAM;;AAOxC,UAAI,AAAkB,2BAAG;AACJ,QAAnB,0BAAiB,aAAjB,2BAAiB;AASf,QARF,wBAAkB;AACN,UAAV,iBAAQ,aAAR,kBAAQ;AACoB,UAA5B,0BAAoB;AAK8C,UAAlE,AAAW,AAAS,sCAAQ,QAAc,YAAa,AAAQ,QAAA;;;IAGrE;;;IApCwB,mBAAa;IACjC,iBAAW;IACX,0BAAoB;;;EAmC1B;;;;;;;;;;;;;;;;;;;;;;;;SASoB;YAAe;AAC/B,cAAmB,mCAAM,OAAO,oBAAmB,eAAe;MACpE;;;;IACF;;;;;;;;;;;;;;;;;;;;;;;;;;;MAuBU;;;;;;MAGK;;;;;;YAOa;AACxB,cAAO,iDACM,qBACF,SAAC,SAAS,MAAM,wCAA0B,mBAAc;MAErE;mBAiDe;;YACR;AAEE,+BAAS,eAAe,IACzB,AAAQ,OAAD,wGACP,AACG,OADI,mHACJ,OACC;AAEV,YAAI,AAAO,MAAD;AACgB,UAAxB,WAAM;;AAEN,gBAAe,AAAuB,+DAA9B,MAAM;;MAElB;;;UAzE4B;UAAsB;;MAAtB;MAAsB;YACrC,AAAM,KAAD;YACL,AAAM,KAAD;AAFlB;;IAE2B;;;;;;;;;;;;;;;;;;;;;;;;;kCAwFgB;AACvC,cAAC,AAAU,AAAQ,UAAT,YAAY;MAAQ;;;UAPb;UAAY;UAAS;;MACzB,aAAE,KAAK;MACL,eAAE,AAAM,KAAD;AACpB,qDAAW,GAAG,SAAS,KAAK;;IAAC;;;;;;;;;;;;;;;;;;;;;;;;;MA2CG;;;;;;MAIzB;;;;;;MAIF;;;;;;YAUe;;AACxB,aACE,OAAO;aACP;aACY,kCAAM,OAAO,oBAAmB;cAHvC,AAAO;MAKhB;;;UAZiB;UACV;UACA;;MAFU;MACV;MACA;AAHP;;IAIE;;;;;;;;;;;;;;;;;;;;;AAkBA,YAAO;IAYT;;;AAfA;;EAAkB","file":"../../../../../../../packages/scoped_model/scoped_model.dart.lib.js"}');
+  // Exports:
+  return {
+    scoped_model: scoped_model
+  };
+}));
+
+//# sourceMappingURL=scoped_model.dart.lib.js.map

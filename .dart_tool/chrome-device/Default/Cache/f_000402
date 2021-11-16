@@ -1,0 +1,576 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/meshcafe_app/src/data/food_data.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/meshcafe_app/src/widgets/home_top_info.dart', 'packages/meshcafe_app/src/widgets/food_category.dart', 'packages/meshcafe_app/src/widgets/search_field.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/material/colors.dart', 'packages/meshcafe_app/src/widgets/bought_foods.dart'], (function load__packages__meshcafe_app__src__homescreen_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__meshcafe_app__src__data__food_data$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__meshcafe_app__src__widgets__home_top_info$46dart, packages__meshcafe_app__src__widgets__food_category$46dart, packages__meshcafe_app__src__widgets__search_field$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__material__colors$46dart, packages__meshcafe_app__src__widgets__bought_foods$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const food_data = packages__meshcafe_app__src__data__food_data$46dart.src__data__food_data;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const home_top_info = packages__meshcafe_app__src__widgets__home_top_info$46dart.src__widgets__home_top_info;
+  const food_category = packages__meshcafe_app__src__widgets__food_category$46dart.src__widgets__food_category;
+  const search_field = packages__meshcafe_app__src__widgets__search_field$46dart.src__widgets__search_field;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const bought_foods = packages__meshcafe_app__src__widgets__bought_foods$46dart.src__widgets__bought_foods;
+  var homescreen = Object.create(dart.library);
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    FoodL: () => (T.FoodL = dart.constFn(dart.legacy(food_data.Food)))(),
+    FoodLToWidgetL: () => (T.FoodLToWidgetL = dart.constFn(dart.fnType(T.WidgetL(), [T.FoodL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C1() {
+      return C[1] = dart.constList([], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 21,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 13,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.constList([C[4] || CT.C4], T._LocationL());
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[3] || CT.C3,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 22,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 25,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 13,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 22,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 21,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12, C[13] || CT.C13], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 35,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 31,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 42,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 19,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 15,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 15,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24, C[25] || CT.C25], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 13,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28, C[29] || CT.C29], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 30,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 20,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C33() {
+      return C[33] = dart.fn(homescreen._buildFoodItems, T.FoodLToWidgetL());
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.constList([C[36] || CT.C36], T._LocationL());
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[35] || CT.C35,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.constList([C[39] || CT.C39, C[40] || CT.C40], T._LocationL());
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[38] || CT.C38,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 18,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 9,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.constList([C[43] || CT.C43], T._LocationL());
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[42] || CT.C42,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 17,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "id",
+        [_Location_column]: 7,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 7,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "imagePath",
+        [_Location_column]: 7,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "category",
+        [_Location_column]: 7,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "discount",
+        [_Location_column]: 7,
+        [_Location_line]: 67,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "price",
+        [_Location_column]: 7,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "ratings",
+        [_Location_column]: 7,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.constList([C[46] || CT.C46, C[47] || CT.C47, C[48] || CT.C48, C[49] || CT.C49, C[50] || CT.C50, C[51] || CT.C51, C[52] || CT.C52], T._LocationL());
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[45] || CT.C45,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 62,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 5,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 5,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C[54] = dart.constList([C[55] || CT.C55, C[56] || CT.C56], T._LocationL());
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[54] || CT.C54,
+        [_Location_name]: null,
+        [_Location_column]: 10,
+        [_Location_line]: 60,
+        [_Location_file]: "file:///Z:/programming/flutter%20projects/meshcafe_app/lib/src/homescreen.dart"
+      });
+    }
+  }, false);
+  var C = Array(57).fill(void 0);
+  var I = ["package:meshcafe_app/src/homescreen.dart"];
+  homescreen.HomeScreen = class HomeScreen extends framework.StatefulWidget {
+    createState() {
+      return new homescreen._HomeScreenState.new();
+    }
+  };
+  (homescreen.HomeScreen.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    homescreen.HomeScreen.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = homescreen.HomeScreen.prototype;
+  dart.addTypeTests(homescreen.HomeScreen);
+  dart.addTypeCaches(homescreen.HomeScreen);
+  dart.setMethodSignature(homescreen.HomeScreen, () => ({
+    __proto__: dart.getMethods(homescreen.HomeScreen.__proto__),
+    createState: dart.fnType(dart.legacy(homescreen._HomeScreenState), [])
+  }));
+  dart.setLibraryUri(homescreen.HomeScreen, I[0]);
+  var _foods = dart.privateName(homescreen, "_foods");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  homescreen._HomeScreenState = class _HomeScreenState extends framework.State$(dart.legacy(homescreen.HomeScreen)) {
+    build(context) {
+      return new scaffold.Scaffold.new({body: new scroll_view.ListView.new({padding: new edge_insets.EdgeInsets.only({top: 30.0, left: 20.0, right: 20.0}), children: T.JSArrayOfWidgetL().of([new home_top_info.HomeTopInfo.new({$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new basic.SizedBox.new({height: 5.0, $creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), new food_category.FoodCategory.new({$creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), new basic.SizedBox.new({height: 7.0, $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), new search_field.SearchField.new({$creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), new container.Container.new({margin: new edge_insets.EdgeInsets.only({top: 15.0}), child: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: T.JSArrayOfWidgetL().of([new text.Text.new("Frequently bought foods", {style: new text_style.TextStyle.new({fontSize: 18.0, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+                    }, T.VoidToNull()), child: new text.Text.new("View All", {style: new text_style.TextStyle.new({fontSize: 18.0, fontWeight: ui.FontWeight.bold, color: colors.Colors.orangeAccent}), $creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18})]), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), new basic.SizedBox.new({height: 20.0, $creationLocationd_0dea112b090073317d4: C[30] || CT.C30}), new basic.Column.new({children: this[_foods][$map](T.WidgetL(), C[33] || CT.C33)[$toList](), $creationLocationd_0dea112b090073317d4: C[34] || CT.C34})]), $creationLocationd_0dea112b090073317d4: C[37] || CT.C37}), $creationLocationd_0dea112b090073317d4: C[41] || CT.C41});
+    }
+  };
+  (homescreen._HomeScreenState.new = function() {
+    this[_foods] = food_data.foods;
+    homescreen._HomeScreenState.__proto__.new.call(this);
+    ;
+  }).prototype = homescreen._HomeScreenState.prototype;
+  dart.addTypeTests(homescreen._HomeScreenState);
+  dart.addTypeCaches(homescreen._HomeScreenState);
+  dart.setMethodSignature(homescreen._HomeScreenState, () => ({
+    __proto__: dart.getMethods(homescreen._HomeScreenState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(homescreen._HomeScreenState, I[0]);
+  dart.setFieldSignature(homescreen._HomeScreenState, () => ({
+    __proto__: dart.getFields(homescreen._HomeScreenState.__proto__),
+    [_foods]: dart.fieldType(dart.legacy(core.List$(dart.legacy(food_data.Food))))
+  }));
+  homescreen._buildFoodItems = function _buildFoodItems(food) {
+    return new container.Container.new({margin: new edge_insets.EdgeInsets.only({bottom: 20.0}), child: new bought_foods.BoughtFoods.new({id: food.id, name: food.name, imagePath: food.imagePath, category: food.category, discount: food.discount, price: food.price, ratings: food.ratings, $creationLocationd_0dea112b090073317d4: C[44] || CT.C44}), $creationLocationd_0dea112b090073317d4: C[53] || CT.C53});
+  };
+  dart.trackLibraries("packages/meshcafe_app/src/homescreen.dart", {
+    "package:meshcafe_app/src/homescreen.dart": homescreen
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["homescreen.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AASoC;IAAkB;;;;;;EACtD;;;;;;;;;;;;;;;UAK4B;AACxB,YAAO,kCACG,uCACkB,sCAAU,YAAY,aAAa,kBACrC,yBACpB,4FACA,gCACU,8DAEV,6FACA,gCACU,8DAEV,2FACA,qCACqB,sCAAU,eACtB,sCACgC,+CACnB,yBAChB,kBAAK,mCACM,wCACK,kBACa,iFAE7B,iDACS;+CACA,kBAAK,oBACD,wCACO,kBACa,2BACT,4QAK9B,gCAAiB,iEACjB,gCACY,AAAO,AAAqB;IAGhD;;;IA1CW,eAAS;;;EA2CtB;;;;;;;;;;;;wDAE4B;AAC1B,UAAO,sCACc,yCAAa,eACzB,sCACD,AAAK,IAAD,WACF,AAAK,IAAD,kBACC,AAAK,IAAD,sBACL,AAAK,IAAD,qBACJ,AAAK,IAAD,kBACP,AAAK,IAAD,iBACF,AAAK,IAAD;EAGnB","file":"../../../../../packages/meshcafe_app/src/homescreen.dart.lib.js"}');
+  // Exports:
+  return {
+    src__homescreen: homescreen
+  };
+}));
+
+//# sourceMappingURL=homescreen.dart.lib.js.map
