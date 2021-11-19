@@ -1,7 +1,11 @@
 import 'dart:io';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:meshcafe_app/src/models/user_model.dart';
+import 'package:meshcafe_app/src/pages/signup_page.dart';
 import '../widgets/small_button.dart';
 //path_provider and path for storing image permanently
 import 'package:path_provider/path_provider.dart';
@@ -13,6 +17,21 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  User user = FirebaseAuth.instance.currentUser;
+  UserModel loggedInUser = UserModel();
+  @override
+  void initState() {
+    super.initState();
+    FirebaseFirestore.instance
+        .collection("users")
+        .doc(user.uid)
+        .get()
+        .then((value) {
+      this.loggedInUser = UserModel.fromMap(value.data());
+      setState(() {});
+    });
+  }
+
   File image;
   Future PickImage() async {
     try {
@@ -101,17 +120,15 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      "Prabin Lamsal",
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
-                    ),
+                    (Text(loggedInUser.username,
+                        style: TextStyle(
+                          fontSize: 16,
+                        ))),
                     SizedBox(
                       height: 10,
                     ),
                     Text(
-                      "9846825271",
+                      loggedInUser.phonenumber,
                       style: TextStyle(color: Colors.grey),
                     ),
                     SizedBox(
@@ -140,6 +157,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                               Navigator.of(context)
                                                   .pop(ImageSource.gallery);
                                               PickImage();
+                                              print(loggedInUser.username);
                                             })
                                       ],
                                     ),

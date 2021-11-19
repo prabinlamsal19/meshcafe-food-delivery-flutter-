@@ -22,9 +22,5 @@
     {
         "merged": "Z:\\programming\\flutter projects\\meshcafe_app\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "Z:\\programming\\flutter projects\\meshcafe_app\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "Z:\\programming\\flutter projects\\meshcafe_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable_launch_background.xml.flat",
-        "source": "Z:\\programming\\flutter projects\\meshcafe_app\\android\\app\\src\\main\\res\\drawable\\launch_background.xml"
     }
 ]

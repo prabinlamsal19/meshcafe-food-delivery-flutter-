@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1066308293691",
+    "firebase_url": "https://meshcafe-ae445-default-rtdb.firebaseio.com",
+    "project_id": "meshcafe-ae445",
+    "storage_bucket": "meshcafe-ae445.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066308293691:android:2d7bb48723b4d7f851b81e",
+        "android_client_info": {
+          "package_name": "com.example.meshcafe_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066308293691-bijtmmh0d5lohchfpsl8u47hsp7r5hlq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.meshcafe_app",
+            "certificate_hash": "a9083cf96b34301d8d3469abc9addcaf479a00f0"
+          }
+        },
+        {
+          "client_id": "1066308293691-dlk01f89lke0o2csroafjdvu0mu79nf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjgeIA_SDwVK09jAb7JLk4B1-3AUwxHbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066308293691-dlk01f89lke0o2csroafjdvu0mu79nf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
