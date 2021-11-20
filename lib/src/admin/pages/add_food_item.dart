@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:meshcafe_app/src/models/category_model.dart';
+// import 'package:meshcafe_app/src/models/category_model.dart';
 import 'package:meshcafe_app/src/models/food_model.dart';
 import 'package:meshcafe_app/src/widgets/button.dart';
-import 'package:scoped_model/scoped_model.dart';
 
 class AddFoodItem extends StatefulWidget {
   @override
   _AddFoodItemState createState() => _AddFoodItemState();
 }
 
-String title;
-String category;
-String description;
-String price;
-String discount;
+String? title;
+String? category;
+String? description;
+late String price;
+late String discount;
 
 GlobalKey<FormState> _foodItemFormKey = GlobalKey();
 
@@ -51,8 +50,8 @@ class _AddFoodItemState extends State<AddFoodItem> {
                 ),
                 GestureDetector(
                     onTap: () {
-                      if (_foodItemFormKey.currentState.validate()) {
-                        _foodItemFormKey.currentState.save();
+                      if (_foodItemFormKey.currentState!.validate()) {
+                        _foodItemFormKey.currentState!.save();
 
                         final Food food = Food(
                             name: title,
@@ -77,9 +76,9 @@ Widget _buildTextFormField(String hint, {int maxLine = 1}) {
       keyboardType: hint == "Price" || hint == "Discount"
           ? TextInputType.number
           : TextInputType.text,
-      validator: (String value) {
+      validator: (String? value) {
         var errorMsg;
-        if (value.isEmpty && hint != "Discount") {
+        if (value!.isEmpty && hint != "Discount") {
           errorMsg = "The $hint) is required";
         }
 

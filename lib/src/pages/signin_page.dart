@@ -27,7 +27,7 @@ class _SignInPageState extends State<SignInPage> {
       controller: emailController,
       keyboardType: TextInputType.emailAddress,
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           return "Please enter your email address";
         }
         // //reg expression for email validation
@@ -39,7 +39,7 @@ class _SignInPageState extends State<SignInPage> {
         return null;
       },
       onSaved: (value) {
-        emailController.text = value;
+        emailController.text = value!;
       },
       decoration: InputDecoration(
           hintText: "Your email or username",
@@ -57,7 +57,7 @@ class _SignInPageState extends State<SignInPage> {
       validator: (value) {
         RegExp regex = new RegExp(r'^.{6,}$');
 
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           return "Password is required for login.";
         }
         // if (regex.hasMatch(value)) {
@@ -66,7 +66,7 @@ class _SignInPageState extends State<SignInPage> {
         return null;
       },
       onSaved: (value) {
-        passwordController.text = value;
+        passwordController.text = value!;
       },
       obscureText: _toggleVisibility,
       decoration: InputDecoration(
@@ -193,7 +193,7 @@ class _SignInPageState extends State<SignInPage> {
   // login function
 
   void signIn(String email, String password) async {
-    if (_formKey.currentState.validate()) {
+    if (_formKey.currentState!.validate()) {
       await _auth
           .signInWithEmailAndPassword(email: email, password: password)
           .then((uid) => {

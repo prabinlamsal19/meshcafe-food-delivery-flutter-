@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FoodCard extends StatelessWidget {
-  final String categoryName;
-  final String imagePath;
-  final int numberOfItems;
+  final String? categoryName;
+  final String? imagePath;
+  final int? numberOfItems;
 
   FoodCard({this.categoryName, this.imagePath, this.numberOfItems});
   @override
@@ -19,7 +19,7 @@ class FoodCard extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Image(
-                image: AssetImage(imagePath),
+                image: AssetImage(imagePath!),
                 height: 65.0,
                 width: 65.0,
               ),
@@ -29,7 +29,7 @@ class FoodCard extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(categoryName,
+                  Text(categoryName!,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16.0,

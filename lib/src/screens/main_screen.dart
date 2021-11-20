@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:meshcafe_app/src/admin/pages/add_food_item.dart';
-import 'package:meshcafe_app/src/scoped-model/food_model.dart';
 //Pages
 import '../pages/homepage.dart';
 import '../pages/order_page.dart';
@@ -18,15 +17,15 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int currentTabIndex = 0;
 
-  List<Widget> pages;
-  Widget currentPage;
+  late List<Widget?> pages;
+  Widget? currentPage;
 
-  HomePage homePage;
-  OrderPage orderPage;
-  ExplorePage explorePage;
-  ProfilePage profilePage;
-  SignUpPage signupPage;
-  AddFoodItem addFoodItemPage;
+  HomePage? homePage;
+  OrderPage? orderPage;
+  ExplorePage? explorePage;
+  ProfilePage? profilePage;
+  SignUpPage? signupPage;
+  AddFoodItem? addFoodItemPage;
 
   @override
   void initState() {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SmallButton extends StatelessWidget {
-  String value;
+  String? value;
   SmallButton({this.value});
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class SmallButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.0)),
       child: Center(
         child:
-            Text(value, style: TextStyle(color: Colors.blue, fontSize: 16.0)),
+            Text(value!, style: TextStyle(color: Colors.blue, fontSize: 16.0)),
       ),
     );
   }

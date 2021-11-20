@@ -4,8 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:meshcafe_app/src/data/category_data.dart';
 import 'package:meshcafe_app/src/models/user_model.dart';
-import 'package:meshcafe_app/src/pages/signup_page.dart';
+// import 'package:meshcafe_app/src/pages/signup_page.dart';
 import '../widgets/small_button.dart';
 //path_provider and path for storing image permanently
 import 'package:path_provider/path_provider.dart';
@@ -17,14 +18,14 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  User user = FirebaseAuth.instance.currentUser;
+  User? user = FirebaseAuth.instance.currentUser;
   UserModel loggedInUser = UserModel();
   @override
   void initState() {
     super.initState();
     FirebaseFirestore.instance
         .collection("users")
-        .doc(user.uid)
+        .doc(user!.uid)
         .get()
         .then((value) {
       this.loggedInUser = UserModel.fromMap(value.data());
@@ -32,7 +33,8 @@ class _ProfilePageState extends State<ProfilePage> {
     });
   }
 
-  File image;
+  File? image;
+  bool loading = false;
   Future PickImage() async {
     try {
       final image = await ImagePicker().pickImage(source: ImageSource.gallery);
@@ -107,9 +109,9 @@ class _ProfilePageState extends State<ProfilePage> {
                         BoxShadow(blurRadius: 3.0, offset: Offset(0, 1.0))
                       ],
                       image: DecorationImage(
-                        image: image == null
+                        image: (image == null
                             ? AssetImage("assets/supper_1.jpeg")
-                            : FileImage(image),
+                            : FileImage(image!)) as ImageProvider<Object>,
                         fit: BoxFit.cover,
                       )),
                   // child: Image.asset("turkey.png"),
@@ -120,15 +122,15 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    (Text(loggedInUser.username,
+                    Text(loggedInUser.username!,
                         style: TextStyle(
                           fontSize: 16,
-                        ))),
+                        )),
                     SizedBox(
                       height: 10,
                     ),
                     Text(
-                      loggedInUser.phonenumber,
+                      loggedInUser.phonenumber!,
                       style: TextStyle(color: Colors.grey),
                     ),
                     SizedBox(
@@ -136,7 +138,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     GestureDetector(
                         onTap: () {
-                          return showModalBottomSheet(
+                          showModalBottomSheet(
                               elevation: 2.0,
                               context: context,
                               builder: (context) => Wrap(children: [

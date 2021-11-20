@@ -31,7 +31,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return TextFormField(
       controller: emailController,
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           return "Email is required for signup.";
         }
         return null;
@@ -48,7 +48,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _buildUsernameTextField() {
     return TextFormField(
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           return "Username is required for signup.";
         }
         return null;
@@ -66,7 +66,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _buildPhonenumberTextField() {
     return TextFormField(
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           return "Phone number is required for signup.";
         }
         return null;
@@ -84,7 +84,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _buildPasswordTextField() {
     return TextFormField(
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           return "Password is required for signup.";
         }
         return null;
@@ -113,7 +113,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _buildConfirmPasswordTextField() {
     return TextFormField(
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           return "Password confirmation is required for signup.";
         }
         return null;
@@ -258,7 +258,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
 //signup function
   void signUp(String email, String password) async {
-    if (_signupformKey.currentState.validate()) {
+    if (_signupformKey.currentState!.validate()) {
       await _auth
           .createUserWithEmailAndPassword(email: email, password: password)
           .then((value) => {postDetailsToFirestore()})
@@ -273,7 +273,7 @@ class _SignUpPageState extends State<SignUpPage> {
 //calling our user model
 //sending these values
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
-    User user = _auth.currentUser;
+    User user = _auth.currentUser!;
     UserModel userModel = UserModel();
     //writing all the values
     userModel.email = user.email;

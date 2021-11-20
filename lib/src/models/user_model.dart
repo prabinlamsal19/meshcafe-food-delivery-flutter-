@@ -1,9 +1,9 @@
 class UserModel {
-  String uid;
-  String email;
-  String username;
-  String password;
-  String phonenumber;
+  String? uid;
+  String? email;
+  String? username;
+  String? password;
+  String? phonenumber;
 
   UserModel(
       {this.uid, this.email, this.username, this.password, this.phonenumber});

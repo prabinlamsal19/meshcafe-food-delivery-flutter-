@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class BoughtFoods extends StatefulWidget {
-  final String id;
-  final String name;
-  final String imagePath;
-  final String category;
-  final double price;
-  final double discount;
-  final double ratings;
+  final String? id;
+  final String? name;
+  final String? imagePath;
+  final String? category;
+  final double? price;
+  final double? discount;
+  final double? ratings;
 
   BoughtFoods(
       {this.id,
@@ -32,7 +32,7 @@ class _BoughtFoodsState extends State<BoughtFoods> {
           height: 250.0,
           width: 470.0,
           child: Image.asset(
-            widget.imagePath,
+            widget.imagePath!,
             fit: BoxFit.cover,
           ),
         ),
@@ -56,7 +56,7 @@ class _BoughtFoodsState extends State<BoughtFoods> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(widget.name,
+                  Text(widget.name!,
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18.0,
