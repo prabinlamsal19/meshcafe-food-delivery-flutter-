@@ -42,8 +42,8 @@ class _MainScreenState extends State<MainScreen> {
     signupPage = SignUpPage();
     addFoodItemPage = AddFoodItem();
 
-    pages = [homePage, explorePage, orderPage, profilePage];
-    currentPage = addFoodItemPage;
+    pages = [homePage, explorePage, orderPage, profilePage, addFoodItemPage];
+    currentPage = homePage;
   }
 
   @override
@@ -67,6 +67,8 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart_outlined), label: "Orders"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.admin_panel_settings), label: "Add Food Item"),
         ],
       ),
       body: currentPage,

@@ -234,7 +234,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                               SignInPage()));
                                 },
                                 child: Text(
-                                  "SignUp",
+                                  "Sign in",
                                   style: TextStyle(
                                       color: Colors.blue,
                                       fontWeight: FontWeight.bold,
@@ -286,10 +286,22 @@ class _SignUpPageState extends State<SignUpPage> {
         .collection("users")
         .doc(user.uid)
         .set(userModel.toMap());
-    Fluttertoast.showToast(msg: "Accound created successfully.");
+    Fluttertoast.showToast(msg: "Account created successfully.");
     Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (context) => ProfilePage()),
         (route) => false);
   }
 }
+
+
+//   Food(
+//       {this.id,
+//       this.name,
+//       this.imagePath,
+//       this.description,
+//       this.category,
+//       this.price,
+//       this.discount,
+//       this.ratings});
+// }

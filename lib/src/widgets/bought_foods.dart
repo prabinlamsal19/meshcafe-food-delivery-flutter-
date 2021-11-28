@@ -5,9 +5,9 @@ class BoughtFoods extends StatefulWidget {
   final String? name;
   final String? imagePath;
   final String? category;
-  final double? price;
-  final double? discount;
-  final double? ratings;
+  final String? price;
+  final String? discount;
+  final String? ratings;
 
   BoughtFoods(
       {this.id,

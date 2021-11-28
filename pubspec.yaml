@@ -26,6 +26,7 @@ dependencies:
   firebase_core: 
   fluttertoast: 
   flutter_spinkit: "^4.0.0"
+  firebase_storage:
   flutter:
     sdk: flutter
     
