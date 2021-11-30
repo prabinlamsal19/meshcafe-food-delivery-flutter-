@@ -12,7 +12,6 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:path/path.dart';
 //pages
-import 'FirebaseApi.dart';
 
 class AddFoodItem extends StatefulWidget {
   @override
@@ -35,6 +34,13 @@ late String discount;
 GlobalKey<FormState> _foodItemFormKey = GlobalKey();
 
 class _AddFoodItemState extends State<AddFoodItem> {
+  String? returnUrl(String? url) {
+    setState(() {
+      finalUrl = url;
+    });
+    // finalUrl = url;
+  }
+
   File? image;
   bool loading = false;
   Future PickFoodImage() async {
@@ -45,8 +51,10 @@ class _AddFoodItemState extends State<AddFoodItem> {
       final imageTemporary = File(imagefile.path);
       //final imagePermanent = await saveImagePermanently(image.path); //only name is permanent.. its temporary.
       // SaveImage(imageTemporary);
+
       setState(() {
         this.image = imageTemporary;
+        uploadFile(this.image!);
       });
     } on PlatformException catch (e) {
       print("Failed to pick image: $e");
@@ -115,6 +123,11 @@ class _AddFoodItemState extends State<AddFoodItem> {
                       if (_foodItemFormKey.currentState!.validate()) {
                         _foodItemFormKey.currentState!.save();
                         postFirestore();
+                        foodTitleController.clear();
+                        categoryController.clear();
+                        descriptionController.clear();
+                        priceController.clear();
+                        discountController.clear();
 
                         // final Food food = Food(
                         //     name: title,
@@ -210,18 +223,21 @@ class _AddFoodItemState extends State<AddFoodItem> {
 // ignore: dead_code
   String? finalUrl;
   postFirestore() async {
-    FirebaseApi? a;
+    // FirebaseApi? a;
     FirebaseFirestore firestore = FirebaseFirestore.instance;
     Food food = Food();
     //putting the data
     food.name = foodTitleController.text;
     food.category = categoryController.text;
-  food.imagePath = "waiting...";
+    // food.imagePath = finalUrl;
     food.description = descriptionController.text;
     food.price = priceController.text;
     food.discount = discountController.text;
     food.ratings = "five stars"; // get the average ratings from database..
-    await uploadFile();
+    // Future finalUrl = uploadFile();
+    // food.imagePath = returnUrl();
+    food.imagePath = finalUrl;
+
     await firestore
         .collection('food')
         .doc(foodTitleController.text)
@@ -234,21 +250,31 @@ class _AddFoodItemState extends State<AddFoodItem> {
 //the container also displays the image file ..
 
 //for uploading image to firebase,
+  Future putandgetFile(String destination, File file) async {
+    try {
+      print("point 1");
+      final ref = firebase_storage.FirebaseStorage.instance.ref(destination);
+
+      await ref.putFile(file);
+      String url = await (ref.getDownloadURL());
+
+      return url;
+    } on FirebaseException catch (e) {
+      return null;
+    }
+  }
 
 //create a reference to the firestore document that will sotre the url
-  Future uploadFile() async {
-    if (image == null) return;
-    final fileName = basename(image!.path);
+  Future uploadFile(File img_file) async {
+    if (img_file == null) return;
+    final fileName = basename(img_file.path);
     final destination = 'files/$fileName';
-    FirebaseApi().uploadFile(destination, image!);
-    await FirebaseFirestore.instance
-        .collection('food')
-        .doc(foodTitleController.text)
-        .( 
-          'imagePath': {FirebaseApi().returnUrl()}; // start
-        );
-  }
+    String a = await putandgetFile(destination, img_file);
+    print(a);
+    this.finalUrl = a;
+    print({"the url is: ${finalUrl.toString()}"});
+
     // DocumentReference sightingRef =
-    //     FirebaseFirestore.instance.collection("food").doc();
+    // FirebaseFirestore.instance.collection("food").doc();
   }
 }
