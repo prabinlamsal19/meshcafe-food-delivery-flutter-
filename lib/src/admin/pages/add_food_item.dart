@@ -17,7 +17,7 @@ class AddFoodItem extends StatefulWidget {
   @override
   _AddFoodItemState createState() => _AddFoodItemState();
 }
-
+  
 //editing controllers
 final TextEditingController foodTitleController = new TextEditingController();
 final TextEditingController categoryController = new TextEditingController();
@@ -265,6 +265,7 @@ class _AddFoodItemState extends State<AddFoodItem> {
   }
 
 //create a reference to the firestore document that will sotre the url
+//
   Future uploadFile(File img_file) async {
     if (img_file == null) return;
     final fileName = basename(img_file.path);
@@ -273,6 +274,7 @@ class _AddFoodItemState extends State<AddFoodItem> {
     print(a);
     this.finalUrl = a;
     print({"the url is: ${finalUrl.toString()}"});
+    
 
     // DocumentReference sightingRef =
     // FirebaseFirestore.instance.collection("food").doc();
